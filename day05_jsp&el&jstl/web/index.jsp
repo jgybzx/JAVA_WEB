@@ -14,7 +14,8 @@
 <body>
 <input type="button" id="btn" value=显示 onclick="start()"/><br>
 <input type="button" id="btn1" value="停止" onclick="stop()">
-<span id="span"></span>
+<span id="span"></span><br>
+<input type="text" name="checkcode"><img src="getMyCode">
 </body>
 <script>
     let interval;

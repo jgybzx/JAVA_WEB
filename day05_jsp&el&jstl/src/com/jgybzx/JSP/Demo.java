@@ -7,4 +7,7 @@ package com.jgybzx.JSP;
  * @version:
  */
 public class Demo {
+    public static void main(String[] args) {
+
+    }
 }
