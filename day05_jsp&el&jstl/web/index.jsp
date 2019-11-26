@@ -28,7 +28,9 @@ ${empty str}<br>
 ${empty list}<br>
 ${str == null? "数据为空":str}<br>
 ${not empty str}
-<c:out value="out"> sa</c:out>
+<c:if test="${empty attr}">
+    <h1>如果attr为空  则输出</h1>
+</c:if>
 </body>
 <script>
     let interval;
