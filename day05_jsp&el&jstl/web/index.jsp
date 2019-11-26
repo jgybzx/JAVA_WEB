@@ -13,7 +13,7 @@
 <head>
     <title>$Title$</title>
 </head>
-//http://localhost:8080/day05/index.jsp
+http://localhost:8080/day05/index.jsp
 <body>
 <input type="button" id="btn" value=显示 onclick="start()"/><br>
 <input type="button" id="btn1" value="停止" onclick="stop()">
