@@ -1,3 +1,6 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%@ page import="java.util.ArrayList" %>
 <%--
   Created by IntelliJ IDEA.
   User: Jgybz
@@ -10,12 +13,22 @@
 <head>
     <title>$Title$</title>
 </head>
-
+//http://localhost:8080/day05/index.jsp
 <body>
 <input type="button" id="btn" value=显示 onclick="start()"/><br>
 <input type="button" id="btn1" value="停止" onclick="stop()">
 <span id="span"></span><br>
 <input type="text" name="checkcode"><img src="getMyCode">
+<hr>
+<%
+    request.setAttribute("str",null);
+    request.setAttribute("list",new ArrayList<>());
+%>
+${empty str}<br>
+${empty list}<br>
+${str == null? "数据为空":str}<br>
+${not empty str}
+<c:out value="out"> sa</c:out>
 </body>
 <script>
     let interval;
