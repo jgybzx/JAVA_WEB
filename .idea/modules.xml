@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/day03_request&amp;response/day03_request&amp;response.iml" filepath="$PROJECT_DIR$/day03_request&amp;response/day03_request&amp;response.iml" />
       <module fileurl="file://$PROJECT_DIR$/day05_jsp&amp;el&amp;jstl/day05_jsp&amp;el&amp;jstl.iml" filepath="$PROJECT_DIR$/day05_jsp&amp;el&amp;jstl/day05_jsp&amp;el&amp;jstl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day06_filter&amp;listener/day06_filter&amp;listener.iml" filepath="$PROJECT_DIR$/day06_filter&amp;listener/day06_filter&amp;listener.iml" />
     </modules>
   </component>
 </project>

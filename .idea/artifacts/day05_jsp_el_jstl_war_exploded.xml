@@ -7,6 +7,11 @@
         <element id="directory" name="classes">
           <element id="module-output" name="day05_jsp&amp;el&amp;jstl" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="kaptcha-2.3.2" />
+          <element id="library" level="project" name="javax.servlet.jsp.jstl" />
+          <element id="library" level="project" name="jstl-impl" />
+        </element>
       </element>
     </root>
   </artifact>

@@ -3,7 +3,9 @@ package com.jgybzx.dao;
 import com.jgybzx.entity.People;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author: guojy
