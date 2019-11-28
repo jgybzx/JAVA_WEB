@@ -17,7 +17,7 @@ import java.util.Map;
  * @date: 2019/11/26 18:27
  * @Description: ${TODO}
  * @version:
- *///http:localhost:8080/
+ */
 @WebServlet("/LoginServlet")
 //WebServlet(name = "LoginServlet",urlPatterns="/LoginServlet")
 public class LoginServlet extends HttpServlet {

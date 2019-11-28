@@ -12,7 +12,7 @@ import java.io.*;
  * @date: 2019/11/26 19:08
  * @Description: ${TODO}
  * @version:
- *///http:localhost:8080/
+ */
 @WebServlet("/registerServlet")
 //WebServlet(name = "registerServlet",urlPatterns="/registerServlet")
 public class registerServlet extends HttpServlet {
