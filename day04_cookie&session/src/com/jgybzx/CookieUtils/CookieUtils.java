@@ -30,6 +30,7 @@ public class CookieUtils {
         cookie.setPath(request.getContextPath());
         //添加
         response.addCookie(cookie);
+        System.out.println("添加成功");
     }
 
     /**
@@ -45,6 +46,7 @@ public class CookieUtils {
                 String cookieName = cookie.getName();
                 if (cookieName.equals(name)) {
                     value= cookie.getValue();
+                    break;
                 }
             }
         }
@@ -72,6 +74,7 @@ public class CookieUtils {
         cookie.setPath(request.getContextPath());
         //添加
         response.addCookie(cookie);
+        System.out.println("添加成功");
     }
 
     /**
