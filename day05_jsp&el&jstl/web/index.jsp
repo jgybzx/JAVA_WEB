@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@ include file="/static/index.html"%>
 <%@ page import="java.util.ArrayList" %>
 <%--
   Created by IntelliJ IDEA.
