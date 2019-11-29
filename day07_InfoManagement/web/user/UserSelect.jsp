@@ -42,6 +42,5 @@ http://localhost:8080/day07/user/UserSelect.jsp
 
 </table>
 
-
 </body>
 </html>
