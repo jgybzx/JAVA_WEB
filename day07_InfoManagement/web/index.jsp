@@ -15,10 +15,6 @@
 <h3>【人员信息展示 】</h3>
 <a href="/day07/UserSelect">展示</a>
 <hr>
-<form method="post" enctype="multipart/form-data" action="${pageContext.request.contextPath}/FileServlet">
-    文件<input type="file" name="myFile"/><br/>
-    描述<input type="text" name="myDesc"/><br/>
-    <input type="submit" value="提交"/>
-</form>
+
 </body>
 </html>

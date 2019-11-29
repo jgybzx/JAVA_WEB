@@ -38,9 +38,11 @@ public class FileServlet extends HttpServlet {
         String filename = header.split(";")[2].split("=")[1].replace("\"", "");
         //获取guid 拼接给文件名字，防止同名文件被覆盖
         filename = UUID.randomUUID() + filename;
+        this.getServletContext().setAttribute("filename",filename);
         //把文件写入服务器磁盘
-        myFile.write("E:\\heimaIt\\JavaSE就业\\FileIO操作目录\\服务器文件上传（requset）/" + filename);
-        response.getWriter().write("<h3>【文件上传成功】</h3>");
+        //myFile.write("E:\\heimaIt\\JavaSE就业\\FileIO操作目录\\服务器文件上传（requset）/" + filename);
+        myFile.write(this.getServletContext().getRealPath("/static/img/"+filename));
+        response.getWriter().write("<h3>【文件上传成功】</h3><a href='/day07/UserSelect'>返回</a>");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
