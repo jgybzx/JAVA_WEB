@@ -26,7 +26,8 @@ public class UserDelete extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");//解决response响应乱码问题
         String id = request.getParameter("id");
         userService.delete(id);
-        response.sendRedirect(request.getContextPath()+"/UserSelect");
+
+        response.sendRedirect(request.getContextPath() + "/UserSelect");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -9,10 +9,10 @@
 http://localhost:8080/day07/user/UserSelect.jsp
 
 <p align="center">查询用户信息&emsp; <a href="${pageContext.request.contextPath}/user/UserInsert.jsp">新增</a></p>
-<table border="1" align="center" cellpadding="5" cellspacing="0" width="850"  bgcolor="pink">
+<table border="1" align="center" cellpadding="5" cellspacing="0" width="550" bgcolor="#f5f5dc">
     <tr bgcolor="#7fffd4">
-        <th>顺序</th>
-        <th>用户编号</th>
+        <th hidden>顺序</th>
+        <th>序号</th>
         <th>用户姓名</th>
         <th>用户密码</th>
         <th>用户年龄</th>
@@ -22,11 +22,11 @@ http://localhost:8080/day07/user/UserSelect.jsp
         <c:forEach items="${list}" var="user" varStatus="status">
             <tr align="center">
                 <td>${status.count}</td>
-<%--                <td>${user.userId}</td>--%>
-<%--                <td>${user.userName}</td>--%>
-<%--                <td>${user.userPass}</td>--%>
-<%--                <td>${user.userAge}</td>--%>
-                <td>${user.getUserId()}</td>
+                    <%--                <td>${user.userId}</td>--%>
+                    <%--                <td>${user.userName}</td>--%>
+                    <%--                <td>${user.userPass}</td>--%>
+                    <%--                <td>${user.userAge}</td>--%>
+                <td hidden>${user.getUserId()}</td>
                 <td>${user.getUserName()}</td>
                 <td>${user.getUserPass()}</td>
                 <td>${user.getUserAge()}</td>

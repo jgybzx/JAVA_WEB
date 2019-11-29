@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body bgcolor="#efefef">
+<body bgcolor="#f0f8ff">
 
 <p align="center">修改用户信息</p>
-<div style="margin:auto;width:500px;background-color: pink;">
+<div style="margin:auto;width:400px;background-color: beige;">
     <form action="${pageContext.request.contextPath}/UserUpdate" method="post" style="width:300px;margin:auto;">
         用户编号<input type="text" name="userId" value="${user.userId}" hidden/><br/>
         用户姓名<input type="text" name="userName" value="${user.userName}" /><br/>
