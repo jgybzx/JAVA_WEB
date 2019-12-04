@@ -12,7 +12,8 @@
 </head>
 <body>
 <form method="post" enctype="multipart/form-data" action="${pageContext.request.contextPath}/FileServlet">
-    文件<input type="file" name="myFile"/><br/>
+    文件<input type="file" name="myFile" /><br/>
+    <input hidden name="id" value="${pageContext.request.getParameter("id")}" >
     描述<input type="text" name="myDesc"/><br/>
     <input type="submit" value="提交"/>
 </form>

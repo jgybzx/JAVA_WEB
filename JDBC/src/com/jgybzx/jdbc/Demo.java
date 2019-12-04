@@ -2,10 +2,7 @@ package com.jgybzx.jdbc;
 
 import com.mysql.jdbc.Driver;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
  * @author: guojy
@@ -22,9 +19,13 @@ public class Demo {
 //        }
 
         Class.forName("com.mysql.jdbc.Driver");
-        Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/itheima","root","jgybzx");
+        Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/db2_2","root","jgybzx");
         System.out.println(conn);
         Statement statement = conn.createStatement();
-        String sql = "insert into category (cname) value ('我的表呢')";
+//        String sql = "insert  into emp (id,ename) values (1,'asd') ";
+        String sql = "DELETE FROM emp WHERE id = 1";
+        long execute = statement.executeLargeUpdate(sql);
+
+        System.out.println(execute);
     }
 }

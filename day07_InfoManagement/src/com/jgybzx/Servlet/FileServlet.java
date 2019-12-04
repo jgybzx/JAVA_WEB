@@ -31,18 +31,23 @@ public class FileServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");//解决post请求中文乱码问题
         response.setContentType("text/html;charset=utf-8");//解决response响应乱码问题
         String myDesc = request.getParameter("myDesc");
+
         //获取文件字节流
         Part myFile = request.getPart("myFile");
+
         //获取文件名字 header = form-data; name="myFile"; filename="html实体字符.png"
-        String header = myFile.getHeader("Content-Disposition");
-        String filename = header.split(";")[2].split("=")[1].replace("\"", "");
-        //获取guid 拼接给文件名字，防止同名文件被覆盖
-        filename = UUID.randomUUID() + filename;
-        this.getServletContext().setAttribute("filename",filename);
+//        String header = myFile.getHeader("Content-Disposition");
+//        String filetype = header.split(";")[2].split("=")[1].replace("\"", "").split("\\.")[1];
+        //使用用户id作为文件名字
+        String filename =request.getParameter("id")+".jpg";
+        //request.setAttribute("filename",filename);
+
         //把文件写入服务器磁盘
         //myFile.write("E:\\heimaIt\\JavaSE就业\\FileIO操作目录\\服务器文件上传（requset）/" + filename);
         myFile.write(this.getServletContext().getRealPath("/static/img/"+filename));
-        response.getWriter().write("<h3>【文件上传成功】</h3><a href='/day07/UserSelect'>返回</a>");
+//        response.getWriter().write("<h3>【文件上传成功】</h3><a href='/day07/UserSelect'>返回</a>");
+//        request.getRequestDispatcher("/UserSelect").forward(request,response);
+        response.setHeader("refresh","3;url=/day07/UserSelect");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

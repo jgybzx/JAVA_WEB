@@ -23,7 +23,7 @@ http://localhost:8080/day07/user/UserSelect.jsp
     <c:if test="${not empty list}">
         <c:forEach items="${list}" var="user" varStatus="status">
             <tr align="center">
-                <td ><img src="${pageContext.request.contextPath}/static/img/${filename}" width="50px" height="50px"></td>
+                <td ><img src="${pageContext.request.contextPath}/static/img/${user.getUserId()}.jpg" width="50px" height="50px"></td>
                 <td>${status.count}</td>
                     <%--                <td>${user.userId}</td>--%>
                     <%--                <td>${user.userName}</td>--%>
@@ -39,7 +39,7 @@ http://localhost:8080/day07/user/UserSelect.jsp
                     |
                     <a href="${pageContext.request.contextPath}/UserDelete?id=${user.getUserId()}">删除</a>
                     |
-                    <a href="${pageContext.request.contextPath}/user/fileUpload.jsp">头像上传</a>
+                    <a href="${pageContext.request.contextPath}/user/fileUpload.jsp?id=${user.getUserId()}">头像上传</a>
                 </td>
             </tr>
         </c:forEach>
