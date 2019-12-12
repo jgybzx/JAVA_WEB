@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper 映射：数据库 字段和 实体类属性之间的关系-->
+<!--namespace:映射文件的id，主配置文件 通过id来找到这个映射文件-->
+<mapper namespace="userMapper">
+    <select id="findUserAll" resultType="com.jgybzx.domain.User">
+        select * from user;
+    </select>
+    <insert id="insertUser" parameterType="com.jgybzx.domain.User">
+    insert  into user(username,birthday,sex,address) value (#{username},#{birthday},#{sex},#{address});
+    </insert>
+    <update id="updateUser" parameterType="com.jgybzx.domain.User">
+        update user set username=#{username},birthday=#{birthday},sex=#{sex},address=#{address} where id = #{id};
+    </update>
+    <delete id="deleteUser" parameterType="int">
+        delete from user  where id = #{id};
+    </delete>
+    <select id="selectOneUser" resultType="com.jgybzx.domain.User">
+        select * from user where id = #{id};
+    </select>
+</mapper>
